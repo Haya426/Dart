@@ -1,26 +1,21 @@
-import 'package:first_dart/first_dart.dart' as first_dart;
 
 void main(List<String> arguments) {
- // #first way
- List<int> myList = [1,2,3,4,5];
- final firstElement = myList[1];
 
-  print('${first_dart.calculate()}!');
+final names = ['Marry','Jhone','Joe','Sobel','Ryn'];
+//filter name
+final filteredName = names.where((name) => name.length == 5).toList();
+//using loop1
+for(int i = 0; i< filteredName.length;i++){
+  print(filteredName[i]);
 
-//third way
- <int> [1,2,3,4,5];
+}
+print("_________________________");
+//using for loop2
+for(final name in filteredName){
+  print(name);
+}
 
- //using map
- Map<String, dynamic> myMap = {
-  'name':'Jhon Doe',
-  'age' : 20,
-  'registered': true
- };
- final myName = myMap['name'];
-print(myName);
-
-//using set 
-//it opmit the same find
-Set<int> myset = {1,2,1,4,5};
-print(myset.length);
+print("_________________________");
+//using foreach method
+ filteredName.forEach(print);
 }
