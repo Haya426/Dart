@@ -1,21 +1,21 @@
 
 void main(List<String> arguments) {
+bool isSignedIn = true;
+<String> [
+  'This is a fake account',
+  if(isSignedIn) 'Sign out' else 'Sign In',
+];
 
-final names = ['Marry','Jhone','Joe','Sobel','Ryn'];
-//filter name
-final filteredName = names.where((name) => name.length == 5).toList();
-//using loop1
-for(int i = 0; i< filteredName.length;i++){
-  print(filteredName[i]);
+final x = <String>[
+  for (int i =0;i< 5;i++) i.toString(),
+  for(final number in [1,2,3,4]) number.toString()
+];
 
-}
-print("_________________________");
-//using for loop2
-for(final name in filteredName){
-  print(name);
-}
-
-print("_________________________");
-//using foreach method
- filteredName.forEach(print);
+final list1 = ['hello','there'];
+final list2 = ['what','up'];
+final y = <String>[
+  ...list1,
+  ...list2
+];
+print(y);
 }
