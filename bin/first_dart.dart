@@ -9,8 +9,10 @@ void main(List<String> arguments) {
  final result = twicePulsFive(3);
 print(result);
 }
-int Function(int) twice(int Function(int) f){
+
+typedef IntTransfomer =int Function(int);
+ IntTransfomer twice(int Function(int) f){
   return(int x){
     return f(f(x));
-  };
+  };  
 }
