@@ -1,16 +1,24 @@
-enum AccountType {free,premium,vip}
 void main(List<String> arguments) {
-final userAccountType = AccountType.premium;
-print(userAccountType.index);
+  User(firstName: "MB", lastName: "Phong Ram", photoUrl: "https://example.com/abc");
+ User(firstName: "MB", lastName: "Phong Ram", photoUrl: "https://example.com/abc").hasLongName();
 
+ //User.myFunction();
+ //User.myDataField;
 
-switch (userAccountType) {
-  case AccountType.free:
-    print("0 USD!");
-    break;
-    case AccountType.premium:
-    print("20 USD!");
-    break;
-  default:break;
 }
+
+
+class User{
+  String name;
+  String photoUrl;
+
+   User({
+    required String firstName,
+    required String lastName,
+    required this.photoUrl
+  }):  name = '$firstName $lastName';
+
+  bool hasLongName(){
+    return name.length > 10;
+  }
 }
